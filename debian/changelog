@@ -1,0 +1,5 @@
+graylog2-web (0.20.0preview.6-1) unstable; urgency=low
+
+  * Initial Debian Release
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Fri, 15 Nov 2013 18:36:47 +0100

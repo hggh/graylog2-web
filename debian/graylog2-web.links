@@ -1,0 +1,2 @@
+etc/graylog2 opt/graylog2/web/conf
+var/log/graylog2-web opt/graylog2/web/log

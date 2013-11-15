@@ -1,0 +1,18 @@
+Graylog2-Web Interface for Debian
+============================
+
+To enable at boot/init Script - change no to yes in:
+
+# /etc/default/graylog2-web
+
+Configuration is located at /etc/graylog2/graylog2-web-interface.conf
+
+you need to set:
+
+ # graylog2-server.uris
+ # application.secret
+
+
+For more information about configuration:
+
+# http://support.torch.sh/help/kb/graylog2-web-interface/installing-graylog2-web-interface-v0200-previewx-on-nix-systems

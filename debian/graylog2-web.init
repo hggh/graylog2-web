@@ -1,0 +1,110 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          graylog2-web
+# Required-Start:    $network $named $remote_fs $syslog
+# Required-Stop:     $network $named $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Graylog2 Web Interface
+# Description:       Graylog2 Open Source syslog implementation that stores
+#                    your logs in ElasticSearch
+### END INIT INFO
+
+# Author: Jonas Genannt <jonas.genannt@capi2name.de>
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DESC="Graylog2 Web Interface"
+NAME=graylog2-web
+JAR_DIRECTORY=/opt/graylog2/web/lib
+GL_WEBDIR=/opt/graylog2/web
+DAEMON=/usr/bin/java
+PIDFILE=/var/run/graylog2-web/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+JAVA_MIN_MEM=128m
+JAVA_MAX_MEM=1024m
+JAVA_MAX_PERM_SIZE=256m
+RUN=no
+
+# Exit if the package is not installed
+[ -d "$JAR_DIRECTORY" ] || exit 0
+[ -x "$DAEMON" ] || exit 0
+
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+. /lib/init/vars.sh
+
+. /lib/lsb/init-functions
+
+
+JAVA_CLASS_PATH="$GL_WEBDIR/lib/graylog2-web-interface.graylog2-web-interface-0.20.0-preview.6.jar:$GL_WEBDIR/lib/org.scala-lang.scala-library-2.10.2.jar:$GL_WEBDIR/lib/com.typesafe.play.play_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.typesafe.play.sbt-link-2.2.0.jar:$GL_WEBDIR/lib/org.javassist.javassist-3.18.0-GA.jar:$GL_WEBDIR/lib/com.typesafe.play.play-exceptions-2.2.0.jar:$GL_WEBDIR/lib/com.typesafe.play.templates_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.github.scala-incubator.io.scala-io-file_2.10-0.4.2.jar:$GL_WEBDIR/lib/com.github.scala-incubator.io.scala-io-core_2.10-0.4.2.jar:$GL_WEBDIR/lib/com.jsuereth.scala-arm_2.10-1.3.jar:$GL_WEBDIR/lib/com.typesafe.play.play-iteratees_2.10-2.2.0.jar:$GL_WEBDIR/lib/org.scala-stm.scala-stm_2.10-0.7.jar:$GL_WEBDIR/lib/com.typesafe.config-1.0.2.jar:$GL_WEBDIR/lib/com.typesafe.play.play-json_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.typesafe.play.play-functional_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.typesafe.play.play-datacommons_2.10-2.2.0.jar:$GL_WEBDIR/lib/joda-time.joda-time-2.2.jar:$GL_WEBDIR/lib/org.joda.joda-convert-1.3.1.jar:$GL_WEBDIR/lib/com.fasterxml.jackson.core.jackson-annotations-2.2.2.jar:$GL_WEBDIR/lib/com.fasterxml.jackson.core.jackson-core-2.2.2.jar:$GL_WEBDIR/lib/com.fasterxml.jackson.core.jackson-databind-2.2.2.jar:$GL_WEBDIR/lib/org.scala-lang.scala-reflect-2.10.2.jar:$GL_WEBDIR/lib/io.netty.netty-3.7.0.Final.jar:$GL_WEBDIR/lib/com.typesafe.netty.netty-http-pipelining-1.1.2.jar:$GL_WEBDIR/lib/org.slf4j.slf4j-api-1.7.5.jar:$GL_WEBDIR/lib/org.slf4j.jul-to-slf4j-1.7.5.jar:$GL_WEBDIR/lib/org.slf4j.jcl-over-slf4j-1.7.5.jar:$GL_WEBDIR/lib/ch.qos.logback.logback-core-1.0.13.jar:$GL_WEBDIR/lib/ch.qos.logback.logback-classic-1.0.13.jar:$GL_WEBDIR/lib/com.typesafe.akka.akka-actor_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.typesafe.akka.akka-slf4j_2.10-2.2.0.jar:$GL_WEBDIR/lib/org.apache.commons.commons-lang3-3.1.jar:$GL_WEBDIR/lib/com.ning.async-http-client-1.7.18.jar:$GL_WEBDIR/lib/oauth.signpost.signpost-core-1.2.1.2.jar:$GL_WEBDIR/lib/commons-codec.commons-codec-1.3.jar:$GL_WEBDIR/lib/oauth.signpost.signpost-commonshttp4-1.2.1.2.jar:$GL_WEBDIR/lib/org.apache.httpcomponents.httpcore-4.0.1.jar:$GL_WEBDIR/lib/org.apache.httpcomponents.httpclient-4.0.1.jar:$GL_WEBDIR/lib/commons-logging.commons-logging-1.1.1.jar:$GL_WEBDIR/lib/xerces.xercesImpl-2.11.0.jar:$GL_WEBDIR/lib/xml-apis.xml-apis-1.4.01.jar:$GL_WEBDIR/lib/javax.transaction.jta-1.1.jar:$GL_WEBDIR/lib/com.typesafe.play.play-java_2.10-2.2.0.jar:$GL_WEBDIR/lib/org.yaml.snakeyaml-1.12.jar:$GL_WEBDIR/lib/org.hibernate.hibernate-validator-5.0.1.Final.jar:$GL_WEBDIR/lib/javax.validation.validation-api-1.1.0.Final.jar:$GL_WEBDIR/lib/org.jboss.logging.jboss-logging-3.1.1.GA.jar:$GL_WEBDIR/lib/com.fasterxml.classmate-0.8.0.jar:$GL_WEBDIR/lib/org.springframework.spring-context-3.2.3.RELEASE.jar:$GL_WEBDIR/lib/org.springframework.spring-core-3.2.3.RELEASE.jar:$GL_WEBDIR/lib/org.springframework.spring-beans-3.2.3.RELEASE.jar:$GL_WEBDIR/lib/org.reflections.reflections-0.9.8.jar:$GL_WEBDIR/lib/com.google.guava.guava-14.0.1.jar:$GL_WEBDIR/lib/com.google.code.findbugs.jsr305-2.0.1.jar:$GL_WEBDIR/lib/javax.servlet.javax.servlet-api-3.0.1.jar:$GL_WEBDIR/lib/com.typesafe.play.play-cache_2.10-2.2.0.jar:$GL_WEBDIR/lib/net.sf.ehcache.ehcache-core-2.6.6.jar:$GL_WEBDIR/lib/com.typesafe.play.play-java-jdbc_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.typesafe.play.play-jdbc_2.10-2.2.0.jar:$GL_WEBDIR/lib/com.jolbox.bonecp-0.8.0-rc1.jar:$GL_WEBDIR/lib/com.h2database.h2-1.3.172.jar:$GL_WEBDIR/lib/tyrex.tyrex-1.0.1.jar:$GL_WEBDIR/lib/com.typesafe.play.play-java-ebean_2.10-2.2.0.jar:$GL_WEBDIR/lib/org.avaje.ebeanorm.avaje-ebeanorm-3.2.2.jar:$GL_WEBDIR/lib/org.avaje.ebeanorm.avaje-ebeanorm-agent-3.2.1.jar:$GL_WEBDIR/lib/org.hibernate.javax.persistence.hibernate-jpa-2.0-api-1.0.1.Final.jar:$GL_WEBDIR/lib/com.google.code.gson.gson-2.2.jar:$GL_WEBDIR/lib/org.apache.shiro.shiro-core-1.2.2.jar:$GL_WEBDIR/lib/commons-beanutils.commons-beanutils-1.8.3.jar:$GL_WEBDIR/lib/com.google.inject.guice-3.0.jar:$GL_WEBDIR/lib/javax.inject.javax.inject-1.jar:$GL_WEBDIR/lib/aopalliance.aopalliance-1.0.jar:$GL_WEBDIR/lib/org.sonatype.sisu.inject.cglib-2.2.1-v20090111.jar:$GL_WEBDIR/lib/asm.asm-3.1.jar:$GL_WEBDIR/lib/com.google.inject.extensions.guice-assistedinject-3.0.jar:$GL_WEBDIR/lib/org.graylog2.play2-graylog2_2.10-1.0.jar:$GL_WEBDIR/lib/com.sun.jersey.jersey-server-1.17.1.jar:$GL_WEBDIR/lib/com.sun.jersey.jersey-grizzly2-1.17.1.jar:$GL_WEBDIR/lib/org.glassfish.grizzly.grizzly-http-2.2.16.jar:$GL_WEBDIR/lib/org.glassfish.grizzly.grizzly-framework-2.2.16.jar:$GL_WEBDIR/lib/org.glassfish.grizzly.grizzly-http-server-2.2.16.jar:$GL_WEBDIR/lib/org.glassfish.grizzly.grizzly-rcm-2.2.16.jar:$GL_WEBDIR/lib/com.sun.jersey.jersey-bundle-1.17.1.jar:$GL_WEBDIR/lib/javax.ws.rs.jsr311-api-1.1.1.jar"
+
+DAEMON_ARGS="-Xms${JAVA_MIN_MEM} -Xmx${JAVA_MAX_MEM} -XX:MaxPermSize=${JAVA_MAX_PERM_SIZE} -Duser.dir=/opt/graylog2/web  -Dpidfile.path=$PIDFILE -cp \"$JAVA_CLASS_PATH\" play.core.server.NettyServer"
+
+
+
+do_start()
+{
+	if [ "$RUN" != "yes" ] ; then
+		log_progress_msg "(disabled)"
+		log_end_msg 0
+
+		exit 0
+	fi
+	test -e /var/run/graylog2-web || mkdir /var/run/graylog2-web ; chown _graylog2:_graylog2 /var/run/graylog2-web
+	su -s /bin/bash -c "nohup $DAEMON $DAEMON_ARGS >> /var/log/graylog2-web/console.log 2>&1 &" _graylog2
+}
+
+do_stop()
+{
+	if [ -s $PIDFILE ]; then
+		kill `cat ${PIDFILE}` >/dev/null 2>&1
+	fi
+	rm -f $PIDFILE
+	return "0"
+}
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
+	do_start
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  stop)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC" "$NAME"
+	do_stop
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  status)
+       status_of_proc -p "${PIDFILE}" "$DAEMON" "$NAME" && exit 0 || exit $?
+       ;;
+  restart|force-reload)
+	log_daemon_msg "Restarting $DESC" "$NAME"
+	do_stop
+	case "$?" in
+	  0|1)
+		do_start
+		case "$?" in
+			0) log_end_msg 0 ;;
+			1) log_end_msg 1 ;; # Old process is still running
+			*) log_end_msg 1 ;; # Failed to start
+		esac
+		;;
+	  *)
+		# Failed to stop
+		log_end_msg 1
+		;;
+	esac
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
+	exit 3
+	;;
+esac
+
+:

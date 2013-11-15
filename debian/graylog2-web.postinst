@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+
+if [ "$1" = configure ]; then
+	if ! getent passwd _graylog2 > /dev/null; then
+		adduser --system --quiet --home /opt/graylog2/web \
+			--no-create-home --shell /bin/false --force-badname \
+			--group --gecos "Graylog2 User" _graylog2
+	fi
+	test -e /var/log/graylog2-web || mkdir -m 0755 -p /var/log/graylog2-web
+	if ! dpkg-statoverride --list /var/log/graylog2-web >/dev/null 2>&1; then
+		dpkg-statoverride --update --add _graylog2 _graylog2 0755 /var/log/graylog2-web
+	fi
+
+fi
+
+# ensure perms
+test -e /etc/graylog2/graylog2-web-interface.conf && chmod 640 /etc/graylog2/graylog2-web-interface.conf
+test -e /etc/graylog2/graylog2-web-interface.conf && chown root:_graylog2 /etc/graylog2/graylog2-web-interface.conf
+
+db_stop
+
+#DEBHELPER#
