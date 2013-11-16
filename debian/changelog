@@ -1,3 +1,11 @@
+graylog2-web (0.20.0preview.6-2) unstable; urgency=low
+
+  * initscript: auto generate Java Class paths
+  * removed log symlink
+  * added logger.xml configuration for Play framework
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 16 Nov 2013 17:57:22 +0100
+
 graylog2-web (0.20.0preview.6-1) unstable; urgency=low
 
   * Initial Debian Release
