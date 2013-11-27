@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ServerJVMStats - models.ServerJVMStats</title>
-          <meta name="description" content="ServerJVMStats - models.ServerJVMStats" />
-          <meta name="keywords" content="ServerJVMStats models.ServerJVMStats" />
+          <title>RadiosController - controllers.RadiosController</title>
+          <meta name="description" content="RadiosController - controllers.RadiosController" />
+          <meta name="keywords" content="RadiosController controllers.RadiosController" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../index.html';
-            var hash = 'models.ServerJVMStats';
+            var hash = 'controllers.RadiosController';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,8 +25,8 @@
         <body class="type">
       <div id="definition">
         <img src="../lib/class_big.png" />
-        <p id="owner"><a href="package.html" class="extype" name="models">models</a></p>
-        <h1>ServerJVMStats</h1>
+        <p id="owner"><a href="package.html" class="extype" name="controllers">controllers</a></p>
+        <h1>RadiosController</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ServerJVMStats</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">RadiosController</span><span class="result"> extends <a href="AuthenticatedController.html" class="extype" name="controllers.AuthenticatedController">AuthenticatedController</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="AuthenticatedController.html" class="extype" name="controllers.AuthenticatedController">AuthenticatedController</a>, <a href="BaseController.html" class="extype" name="controllers.BaseController">BaseController</a>, <span class="extype" name="play.mvc.Controller">Controller</span>, <span class="extype" name="play.mvc.Http.HeaderNames">HeaderNames</span>, <span class="extype" name="play.mvc.Http.Status">Status</span>, <span class="extype" name="play.mvc.Results">Results</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="models.ServerJVMStats"><span>ServerJVMStats</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="controllers.RadiosController"><span>RadiosController</span></li><li class="in" name="controllers.AuthenticatedController"><span>AuthenticatedController</span></li><li class="in" name="controllers.BaseController"><span>BaseController</span></li><li class="in" name="play.mvc.Controller"><span>Controller</span></li><li class="in" name="play.mvc.Http.HeaderNames"><span>HeaderNames</span></li><li class="in" name="play.mvc.Http.Status"><span>Status</span></li><li class="in" name="play.mvc.Results"><span>Results</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -79,16 +79,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="models.ServerJVMStats#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(r:models.api.responses.system.ServerJVMStatsResponse):models.ServerJVMStats"></a>
-      <a id="&lt;init&gt;:ServerJVMStats"></a>
+              <ol><li name="controllers.RadiosController#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():controllers.RadiosController"></a>
+      <a id="&lt;init&gt;:RadiosController"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ServerJVMStats</span><span class="params">(<span name="r">r: <a href="api/responses/system/ServerJVMStatsResponse.html" class="extype" name="models.api.responses.system.ServerJVMStatsResponse">ServerJVMStatsResponse</a></span>)</span>
+        <span class="name">RadiosController</span><span class="params">()</span>
       </span>
       </h4>
       
@@ -166,6 +166,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="controllers.BaseController#api" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="api():lib.ApiClient"></a>
+      <a id="api():ApiClient"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">api</span><span class="params">()</span><span class="result">: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseController.html" class="extype" name="controllers.BaseController">BaseController</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -243,6 +256,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="controllers.BaseController#flattenFormUrlEncoded" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flattenFormUrlEncoded(form:java.util.Map[String,Array[String]]):java.util.Map[String,String]"></a>
+      <a id="flattenFormUrlEncoded(Map[String,Array[String]]):Map[String,String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flattenFormUrlEncoded</span><span class="params">(<span name="form">form: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="java.lang.String">String</span>]]</span>)</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseController.html" class="extype" name="controllers.BaseController">BaseController</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -256,97 +282,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.ServerJVMStats#getFreeMemory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFreeMemory():models.api.responses.ByteListing"></a>
-      <a id="getFreeMemory():ByteListing"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getFreeMemory</span><span class="params">()</span><span class="result">: <a href="api/responses/ByteListing.html" class="extype" name="models.api.responses.ByteListing">ByteListing</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#getInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getInfo():String"></a>
-      <a id="getInfo():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getInfo</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#getMaxMemory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getMaxMemory():models.api.responses.ByteListing"></a>
-      <a id="getMaxMemory():ByteListing"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMaxMemory</span><span class="params">()</span><span class="result">: <a href="api/responses/ByteListing.html" class="extype" name="models.api.responses.ByteListing">ByteListing</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#getNodeId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getNodeId():String"></a>
-      <a id="getNodeId():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getNodeId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#getPid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getPid():String"></a>
-      <a id="getPid():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPid</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#getTotalMemory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getTotalMemory():models.api.responses.ByteListing"></a>
-      <a id="getTotalMemory():ByteListing"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTotalMemory</span><span class="params">()</span><span class="result">: <a href="api/responses/ByteListing.html" class="extype" name="models.api.responses.ByteListing">ByteListing</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#getUsedMemory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getUsedMemory():models.api.responses.ByteListing"></a>
-      <a id="getUsedMemory():ByteListing"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getUsedMemory</span><span class="params">()</span><span class="result">: <a href="api/responses/ByteListing.html" class="extype" name="models.api.responses.ByteListing">ByteListing</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -412,6 +347,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="controllers.BaseController#setApi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setApi(api:lib.ApiClient):Unit"></a>
+      <a id="setApi(ApiClient):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setApi</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseController.html" class="extype" name="controllers.BaseController">BaseController</a></dd></dl></div>
+    </li><li name="controllers.RadiosController#show" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="show(radioId:String):play.mvc.Result"></a>
+      <a id="show(String):Result"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">show</span><span class="params">(<span name="radioId">radioId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Result">Result</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -438,32 +399,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.ServerJVMStats#totalMemoryPercentage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalMemoryPercentage():Int"></a>
-      <a id="totalMemoryPercentage():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">totalMemoryPercentage</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.ServerJVMStats#usedMemoryPercentage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="usedMemoryPercentage():Int"></a>
-      <a id="usedMemoryPercentage():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">usedMemoryPercentage</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -530,7 +465,19 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="controllers.AuthenticatedController">
+              <h3>Inherited from <a href="AuthenticatedController.html" class="extype" name="controllers.AuthenticatedController">AuthenticatedController</a></h3>
+            </div><div class="parent" name="controllers.BaseController">
+              <h3>Inherited from <a href="BaseController.html" class="extype" name="controllers.BaseController">BaseController</a></h3>
+            </div><div class="parent" name="play.mvc.Controller">
+              <h3>Inherited from <span class="extype" name="play.mvc.Controller">Controller</span></h3>
+            </div><div class="parent" name="play.mvc.Http.HeaderNames">
+              <h3>Inherited from <span class="extype" name="play.mvc.Http.HeaderNames">HeaderNames</span></h3>
+            </div><div class="parent" name="play.mvc.Http.Status">
+              <h3>Inherited from <span class="extype" name="play.mvc.Http.Status">Status</span></h3>
+            </div><div class="parent" name="play.mvc.Results">
+              <h3>Inherited from <span class="extype" name="play.mvc.Results">Results</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
