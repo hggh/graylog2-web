@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.NodeService#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(api:lib.ApiClient,nodeFactory:models.Node.Factory):models.NodeService"></a>
+      <a id="&lt;init&gt;(api:lib.ApiClient,nodeFactory:models.Node.Factory,radioFactory:models.Radio.Factory):models.NodeService"></a>
       <a id="&lt;init&gt;:NodeService"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,14 +88,30 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">NodeService</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="nodeFactory">nodeFactory: <span class="extype" name="models.Node.Factory">Factory</span></span>)</span>
+        <span class="name">NodeService</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="nodeFactory">nodeFactory: <span class="extype" name="models.Node.Factory">Factory</span></span>, <span name="radioFactory">radioFactory: <span class="extype" name="models.Radio.Factory">Factory</span></span>)</span>
       </span>
       </h4>
       
     </li></ol>
             </div>
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="models.NodeService.NodeNotFoundException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeNotFoundExceptionextendsException"></a>
+      <a id="NodeNotFoundException:NodeNotFoundException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeService$NodeNotFoundException.html"><span class="name">NodeNotFoundException</span></a><span class="result"> extends <span class="extype" name="java.lang.Exception">Exception</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -295,6 +311,19 @@
       </span>
       </h4>
       
+    </li><li name="models.NodeService#loadRadio" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="loadRadio(radioId:String):models.Radio"></a>
+      <a id="loadRadio(String):Radio"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loadRadio</span><span class="params">(<span name="radioId">radioId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <a href="Radio.html" class="extype" name="models.Radio">Radio</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -334,6 +363,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="models.NodeService#radios" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="radios():java.util.Map[String,models.Radio]"></a>
+      <a id="radios():Map[String,Radio]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">radios</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="Radio.html" class="extype" name="models.Radio">Radio</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

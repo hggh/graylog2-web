@@ -71,6 +71,19 @@
       </span>
       </h4>
       
+    </li><li name="models.ClusterEntity" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClusterEntityextendsObject"></a>
+      <a id="ClusterEntity:ClusterEntity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEntity.html"><span class="name">ClusterEntity</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li><li name="models.ClusterService" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ClusterServiceextendsObject"></a>
       <a id="ClusterService:ClusterService"></a>
@@ -254,7 +267,7 @@
       </h4>
       
     </li><li name="models.Node" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NodeextendsObject"></a>
+      <a id="NodeextendsClusterEntity"></a>
       <a id="Node:Node"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -262,7 +275,20 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Node.html"><span class="name">Node</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Node.html"><span class="name">Node</span></a><span class="result"> extends <a href="ClusterEntity.html" class="extype" name="models.ClusterEntity">ClusterEntity</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.NodeJVMStats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeJVMStatsextendsObject"></a>
+      <a id="NodeJVMStats:NodeJVMStats"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeJVMStats.html"><span class="name">NodeJVMStats</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -305,16 +331,29 @@
       </span>
       </h4>
       
-    </li><li name="models.ServerJVMStats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ServerJVMStatsextendsObject"></a>
-      <a id="ServerJVMStats:ServerJVMStats"></a>
+    </li><li name="models.Radio" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RadioextendsClusterEntity"></a>
+      <a id="Radio:Radio"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ServerJVMStats.html"><span class="name">ServerJVMStats</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Radio.html"><span class="name">Radio</span></a><span class="result"> extends <a href="ClusterEntity.html" class="extype" name="models.ClusterEntity">ClusterEntity</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.ServerJVMStatsResponse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServerJVMStatsResponseextendsClusterEntityJVMStatsResponse"></a>
+      <a id="ServerJVMStatsResponse:ServerJVMStatsResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ServerJVMStatsResponse.html"><span class="name">ServerJVMStatsResponse</span></a><span class="result"> extends <a href="api/responses/system/ClusterEntityJVMStatsResponse.html" class="extype" name="models.api.responses.system.ClusterEntityJVMStatsResponse">ClusterEntityJVMStatsResponse</a></span>
       </span>
       </h4>
       
