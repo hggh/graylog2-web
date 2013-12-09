@@ -16,3 +16,45 @@ you need to set:
 For more information about configuration:
 
 # http://support.torch.sh/help/kb/graylog2-web-interface/installing-graylog2-web-interface-v0200-previewx-on-nix-systems
+
+
+Graylog2-Web Interface Apach2 Proxy with SSL
+============================================
+
+If you wish to use Graylog2-Web Interface with SSL you can use Apache2 to do SSL
+offloading.
+
+Install apache2 package:
+
+ # apt-get install apache2
+
+# Enable SSL and Proxy
+
+ # a2enmod ssl
+ # a2enmod proxy_http
+
+If you wish to use the default snakeoil certificates, you also need the ssl-cert
+package:
+
+ # apt-get install ssl-cert
+
+Bind the Graylog2 Web Interface to localhost (127.0.0.1)
+
+ # Set HTTP_ADDRESS to "127.0.0.1" in /etc/default/graylog2-web
+
+Restart Web Interface
+
+ # /etc/init.d/graylog2-web restart
+
+Configure Apache, use included default Apache2 configuration
+
+ # cp /usr/share/doc/graylog2-web/examples/apache2-ssl-proxy.conf \
+   /etc/apache2/sites-available/graylog2.conf
+
+Enable vhost configuration
+
+ # a2ensite graylog2.conf
+
+restart Apache2
+
+ # service apache2 restart
