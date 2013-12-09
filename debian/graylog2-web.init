@@ -23,6 +23,8 @@ SCRIPTNAME=/etc/init.d/$NAME
 JAVA_MIN_MEM=128m
 JAVA_MAX_MEM=1024m
 JAVA_MAX_PERM_SIZE=256m
+HTTP_ADDRESS="0.0.0.0"
+HTTP_PORT="9000"
 RUN=no
 
 # Exit if the package is not installed
@@ -40,7 +42,7 @@ for jar in $(ls $JAR_DIRECTORY); do
 	JAVA_CLASS_PATH="${JAVA_CLASS_PATH}:${JAR_DIRECTORY}/${jar}"
 done
 
-DAEMON_ARGS="-Xms${JAVA_MIN_MEM} -Xmx${JAVA_MAX_MEM} -Dlogger.file=/etc/graylog2/graylog2-web-logger.xml -XX:MaxPermSize=${JAVA_MAX_PERM_SIZE} -Duser.dir=${GRAYLOG2_WEB_HOME}  -Dpidfile.path=$PIDFILE -cp \"$JAVA_CLASS_PATH\" play.core.server.NettyServer"
+DAEMON_ARGS="-Xms${JAVA_MIN_MEM} -Xmx${JAVA_MAX_MEM} -Dhttp.port='${HTTP_PORT}' -Dhttp.address='${HTTP_ADDRESS}' -Dlogger.file=/etc/graylog2/graylog2-web-logger.xml -XX:MaxPermSize=${JAVA_MAX_PERM_SIZE} -Duser.dir=${GRAYLOG2_WEB_HOME}  -Dpidfile.path=$PIDFILE -cp \"$JAVA_CLASS_PATH\" play.core.server.NettyServer"
 
 
 do_start()

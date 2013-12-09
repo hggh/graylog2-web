@@ -1,2 +1,4 @@
 # Change to yes, to enable Graylog2 Webinterface on boot
 RUN=no
+HTTP_ADDRESS="0.0.0.0"
+HTTP_PORT="9000"
