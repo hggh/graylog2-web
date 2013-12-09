@@ -1,3 +1,16 @@
+graylog2-web (0.20.0~preview.7-2) unstable; urgency=low
+
+  [ Jochen Schalanda ]
+  * Depend on generic Java 7 runtime instead of OpenJDK7
+
+  [ Jonas Genannt ]
+  * added java7-runtime
+  * added support for HTTP_ADDRESS / HTTP_PORT
+  * default ssl apache2 proxy config and README note
+  * added depend on adduser
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Mon, 09 Dec 2013 20:37:28 +0100
+
 graylog2-web (0.20.0~preview.7-1) unstable; urgency=low
 
   * New Upstream Release
