@@ -19,8 +19,10 @@ if [ "$1" = configure ]; then
 fi
 
 # ensure perms
-test -e /etc/graylog2/graylog2-web-interface.conf && chmod 640 /etc/graylog2/graylog2-web-interface.conf
-test -e /etc/graylog2/graylog2-web-interface.conf && chown root:_graylog2 /etc/graylog2/graylog2-web-interface.conf
+if [ -e /etc/graylog2/web/graylog2-web-interface.conf ]; then
+	chmod 640 /etc/graylog2/web/graylog2-web-interface.conf
+	chown _graylog2:_graylog2 /etc/graylog2/web/graylog2-web-interface.conf
+fi
 
 db_stop
 

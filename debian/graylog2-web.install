@@ -1,5 +1,5 @@
 lib opt/graylog2/web
-conf/application.conf etc/graylog2
-conf/graylog2-web-interface.conf etc/graylog2
-conf/play.plugins etc/graylog2
-debian/conf/graylog2-web-logger.xml etc/graylog2
+conf/application.conf etc/graylog2/web
+conf/graylog2-web-interface.conf etc/graylog2/web
+conf/play.plugins etc/graylog2/web
+debian/conf/graylog2-web-logger.xml etc/graylog2/web
