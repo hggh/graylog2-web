@@ -1,3 +1,9 @@
+graylog2-web (0.20.0~preview.7-3) unstable; urgency=low
+
+  * changed config dir to etc/graylog2/web, better init script
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Thu, 12 Dec 2013 19:33:36 +0100
+
 graylog2-web (0.20.0~preview.7-2) unstable; urgency=low
 
   [ Jochen Schalanda ]
