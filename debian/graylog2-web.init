@@ -42,7 +42,7 @@ for jar in $(ls $JAR_DIRECTORY); do
 	JAVA_CLASS_PATH="${JAVA_CLASS_PATH}:${JAR_DIRECTORY}/${jar}"
 done
 
-DAEMON_ARGS="-Xms${JAVA_MIN_MEM} -Xmx${JAVA_MAX_MEM} -Dhttp.port='${HTTP_PORT}' -Dhttp.address='${HTTP_ADDRESS}' -Dlogger.file=/etc/graylog2/graylog2-web-logger.xml -XX:MaxPermSize=${JAVA_MAX_PERM_SIZE} -Duser.dir=${GRAYLOG2_WEB_HOME}  -Dpidfile.path=$PIDFILE -cp \"$JAVA_CLASS_PATH\" play.core.server.NettyServer"
+DAEMON_ARGS="-Xms${JAVA_MIN_MEM} -Xmx${JAVA_MAX_MEM} -Dhttp.port='${HTTP_PORT}' -Dhttp.address='${HTTP_ADDRESS}' -Dlogger.file=/etc/graylog2/web/graylog2-web-logger.xml -XX:MaxPermSize=${JAVA_MAX_PERM_SIZE} -Duser.dir=${GRAYLOG2_WEB_HOME}  -Dpidfile.path=$PIDFILE -cp \"$JAVA_CLASS_PATH\" play.core.server.NettyServer"
 
 
 running()
