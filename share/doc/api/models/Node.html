@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.Node#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(api:lib.ApiClient,inputFactory:models.Input.Factory,transportAddress:java.net.URI):models.Node"></a>
+      <a id="&lt;init&gt;(api:lib.ApiClient,inputFactory:models.Input.Factory,inputStateFactory:models.InputState.Factory,transportAddress:java.net.URI):models.Node"></a>
       <a id="&lt;init&gt;:Node"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,12 +88,12 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Node</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="inputFactory">inputFactory: <span class="extype" name="models.Input.Factory">Factory</span></span>, <span name="transportAddress">transportAddress: <span class="extype" name="java.net.URI">URI</span></span>)</span>
+        <span class="name">Node</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="inputFactory">inputFactory: <span class="extype" name="models.Input.Factory">Factory</span></span>, <span name="inputStateFactory">inputStateFactory: <span class="extype" name="models.InputState.Factory">Factory</span></span>, <span name="transportAddress">transportAddress: <span class="extype" name="java.net.URI">URI</span></span>)</span>
       </span>
       </h4>
       
     </li><li name="models.Node#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(api:lib.ApiClient,inputFactory:models.Input.Factory,r:models.api.responses.cluster.NodeSummaryResponse):models.Node"></a>
+      <a id="&lt;init&gt;(api:lib.ApiClient,inputFactory:models.Input.Factory,inputStateFactory:models.InputState.Factory,r:models.api.responses.cluster.NodeSummaryResponse):models.Node"></a>
       <a id="&lt;init&gt;:Node"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -101,7 +101,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Node</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="inputFactory">inputFactory: <span class="extype" name="models.Input.Factory">Factory</span></span>, <span name="r">r: <a href="api/responses/cluster/NodeSummaryResponse.html" class="extype" name="models.api.responses.cluster.NodeSummaryResponse">NodeSummaryResponse</a></span>)</span>
+        <span class="name">Node</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="inputFactory">inputFactory: <span class="extype" name="models.Input.Factory">Factory</span></span>, <span name="inputStateFactory">inputStateFactory: <span class="extype" name="models.InputState.Factory">Factory</span></span>, <span name="r">r: <a href="api/responses/cluster/NodeSummaryResponse.html" class="extype" name="models.api.responses.cluster.NodeSummaryResponse">NodeSummaryResponse</a></span>)</span>
       </span>
       </h4>
       
@@ -192,6 +192,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="models.Node#allLoggerSubsystems" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="allLoggerSubsystems():java.util.Map[String,models.InternalLoggerSubsystem]"></a>
+      <a id="allLoggerSubsystems():Map[String,InternalLoggerSubsystem]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">allLoggerSubsystems</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="InternalLoggerSubsystem.html" class="extype" name="models.InternalLoggerSubsystem">InternalLoggerSubsystem</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="models.Node#allLoggers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="allLoggers():java.util.List[models.InternalLogger]"></a>
       <a id="allLoggers():List[InternalLogger]"></a>
@@ -373,7 +386,20 @@
       </span>
       </h4>
       
-    </li><li name="models.Node#getInputTypeInformation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="models.Node#getInputStates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getInputStates():java.util.List[models.InputState]"></a>
+      <a id="getInputStates():List[InputState]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInputStates</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<a href="InputState.html" class="extype" name="models.InputState">InputState</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.Node#getInputTypeInformation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getInputTypeInformation(type:String):models.api.responses.system.InputTypeSummaryResponse"></a>
       <a id="getInputTypeInformation(String):InputTypeSummaryResponse"></a>
       <h4 class="signature">
@@ -385,7 +411,7 @@
         <span class="name">getInputTypeInformation</span><span class="params">(<span name="type">type: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <a href="api/responses/system/InputTypeSummaryResponse.html" class="extype" name="models.api.responses.system.InputTypeSummaryResponse">InputTypeSummaryResponse</a></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.Node">Node</a> → <a href="ClusterEntity.html" class="extype" name="models.ClusterEntity">ClusterEntity</a></dd></dl></div>
     </li><li name="models.Node#getInputTypes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getInputTypes():java.util.Map[String,String]"></a>
       <a id="getInputTypes():Map[String,String]"></a>
@@ -464,7 +490,7 @@
       </span>
       </h4>
       
-    </li><li name="models.Node#getNodeId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="models.Node#getNodeId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getNodeId():String"></a>
       <a id="getNodeId():String"></a>
       <h4 class="signature">
@@ -476,7 +502,7 @@
         <span class="name">getNodeId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.Node">Node</a> → <a href="ClusterEntity.html" class="extype" name="models.ClusterEntity">ClusterEntity</a></dd></dl></div>
     </li><li name="models.Node#getPid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getPid():String"></a>
       <a id="getPid():String"></a>
@@ -503,6 +529,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.Node">Node</a> → <a href="ClusterEntity.html" class="extype" name="models.ClusterEntity">ClusterEntity</a></dd></dl></div>
+    </li><li name="models.Node#getSingleMetric" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getSingleMetric(metricName:String):lib.metrics.Metric"></a>
+      <a id="getSingleMetric(String):Metric"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSingleMetric</span><span class="params">(<span name="metricName">metricName: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <a href="../lib/metrics/Metric.html" class="extype" name="lib.metrics.Metric">Metric</a></span>
+      </span>
+      </h4>
+      
     </li><li name="models.Node#getThreadDump" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getThreadDump():String"></a>
       <a id="getThreadDump():String"></a>
@@ -659,19 +698,32 @@
       </span>
       </h4>
       
-    </li><li name="models.Node#launchInput" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="launchInput(title:String,type:String,configuration:java.util.Map[String,Object],creator:models.User,isExclusive:Boolean):Boolean"></a>
-      <a id="launchInput(String,String,Map[String,AnyRef],User,Boolean):Boolean"></a>
+    </li><li name="models.Node#launchExistingInput" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="launchExistingInput(inputId:String):Boolean"></a>
+      <a id="launchExistingInput(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">launchInput</span><span class="params">(<span name="title">title: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <span class="extype" name="java.lang.String">String</span></span>, <span name="configuration">configuration: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>, <span name="creator">creator: <a href="User.html" class="extype" name="models.User">User</a></span>, <span name="isExclusive">isExclusive: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">launchExistingInput</span><span class="params">(<span name="inputId">inputId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       
+    </li><li name="models.Node#launchInput" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="launchInput(title:String,type:String,global:Boolean,configuration:java.util.Map[String,Object],creator:models.User,isExclusive:Boolean):models.api.responses.system.InputLaunchResponse"></a>
+      <a id="launchInput(String,String,Boolean,Map[String,AnyRef],User,Boolean):InputLaunchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">launchInput</span><span class="params">(<span name="title">title: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <span class="extype" name="java.lang.String">String</span></span>, <span name="global">global: <span class="extype" name="java.lang.Boolean">Boolean</span></span>, <span name="configuration">configuration: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>, <span name="creator">creator: <a href="User.html" class="extype" name="models.User">User</a></span>, <span name="isExclusive">isExclusive: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="api/responses/system/InputLaunchResponse.html" class="extype" name="models.api.responses.system.InputLaunchResponse">InputLaunchResponse</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.Node">Node</a> → <a href="ClusterEntity.html" class="extype" name="models.ClusterEntity">ClusterEntity</a></dd></dl></div>
     </li><li name="models.Node#loadJVMInformation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="loadJVMInformation():Unit"></a>
       <a id="loadJVMInformation():Unit"></a>
@@ -864,6 +916,19 @@
       </span>
       <span class="symbol">
         <span class="name">setActive</span><span class="params">(<span name="active">active: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.Node#setSubsystemLoggerLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setSubsystemLoggerLevel(subsystem:String,level:String):Unit"></a>
+      <a id="setSubsystemLoggerLevel(String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setSubsystemLoggerLevel</span><span class="params">(<span name="subsystem">subsystem: <span class="extype" name="java.lang.String">String</span></span>, <span name="level">level: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       

@@ -44,7 +44,7 @@
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="SearchResultCountWidget.html" class="extype" name="models.dashboards.widgets.SearchResultCountWidget">SearchResultCountWidget</a>, <a href="SearchResultFieldValueChartWidget.html" class="extype" name="models.dashboards.widgets.SearchResultFieldValueChartWidget">SearchResultFieldValueChartWidget</a></div>
+          <div class="subClasses hiddenContent"><a href="FieldChartWidget.html" class="extype" name="models.dashboards.widgets.FieldChartWidget">FieldChartWidget</a>, <a href="SearchResultCountWidget.html" class="extype" name="models.dashboards.widgets.SearchResultCountWidget">SearchResultCountWidget</a>, <a href="StreamSearchResultCountWidget.html" class="extype" name="models.dashboards.widgets.StreamSearchResultCountWidget">StreamSearchResultCountWidget</a></div>
         </div></div>
         
 
@@ -83,6 +83,19 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.dashboards.widgets.DashboardWidget#&lt;init&gt;" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(type:models.dashboards.widgets.DashboardWidget.Type,id:String,description:String,cacheTime:Int,dashboard:models.dashboards.Dashboard,creatorUserId:String):models.dashboards.widgets.DashboardWidget"></a>
+      <a id="&lt;init&gt;:DashboardWidget"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DashboardWidget</span><span class="params">(<span name="type">type: <span class="extype" name="models.dashboards.widgets.DashboardWidget.Type">Type</span></span>, <span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="description">description: <span class="extype" name="java.lang.String">String</span></span>, <span name="cacheTime">cacheTime: <span class="extype" name="scala.Int">Int</span></span>, <span name="dashboard">dashboard: <a href="../Dashboard.html" class="extype" name="models.dashboards.Dashboard">Dashboard</a></span>, <span name="creatorUserId">creatorUserId: <span class="extype" name="java.lang.String">String</span></span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="models.dashboards.widgets">models.dashboards.widgets</a>] </dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#&lt;init&gt;" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(type:models.dashboards.widgets.DashboardWidget.Type,id:String,description:String,cacheTime:Int,dashboard:models.dashboards.Dashboard):models.dashboards.widgets.DashboardWidget"></a>
       <a id="&lt;init&gt;:DashboardWidget"></a>
       <h4 class="signature">
@@ -138,6 +151,19 @@
       </span>
       <span class="symbol">
         <span class="name">getWidth</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.dashboards.widgets.DashboardWidget#replayRoute" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="replayRoute():play.mvc.Call"></a>
+      <a id="replayRoute():Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replayRoute</span><span class="params">()</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
       </span>
       </h4>
       
@@ -314,6 +340,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getCol():Int"></a>
+      <a id="getCol():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCol</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.dashboards.widgets.DashboardWidget#getCreatorUserId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getCreatorUserId():String"></a>
+      <a id="getCreatorUserId():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCreatorUserId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="models.dashboards.widgets.DashboardWidget#getDashboard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getDashboard():models.dashboards.Dashboard"></a>
       <a id="getDashboard():Dashboard"></a>
@@ -350,6 +402,19 @@
       </span>
       <span class="symbol">
         <span class="name">getId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.dashboards.widgets.DashboardWidget#getRow" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getRow():Int"></a>
+      <a id="getRow():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getRow</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       
@@ -444,6 +509,58 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#prepareNonStreamBoundReplayRoute" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prepareNonStreamBoundReplayRoute(query:String,timerange:lib.timeranges.TimeRange):play.mvc.Call"></a>
+      <a id="prepareNonStreamBoundReplayRoute(String,TimeRange):Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prepareNonStreamBoundReplayRoute</span><span class="params">(<span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="timerange">timerange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="models.dashboards.widgets">models.dashboards.widgets</a>] </dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#prepareStreamBoundReplayRoute" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prepareStreamBoundReplayRoute(streamId:String,query:String,timerange:lib.timeranges.TimeRange):play.mvc.Call"></a>
+      <a id="prepareStreamBoundReplayRoute(String,String,TimeRange):Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prepareStreamBoundReplayRoute</span><span class="params">(<span name="streamId">streamId: <span class="extype" name="java.lang.String">String</span></span>, <span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="timerange">timerange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="models.dashboards.widgets">models.dashboards.widgets</a>] </dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#setCol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setCol(col:Int):Unit"></a>
+      <a id="setCol(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCol</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.dashboards.widgets.DashboardWidget#setRow" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setRow(row:Int):Unit"></a>
+      <a id="setRow(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setRow</span><span class="params">(<span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

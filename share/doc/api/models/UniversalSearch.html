@@ -77,7 +77,36 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="models.UniversalSearch#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(api:lib.ApiClient,timeRange:lib.timeranges.TimeRange,query:String,page:Integer,order:models.SearchSort):models.UniversalSearch"></a>
+      <a id="&lt;init&gt;:UniversalSearch"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UniversalSearch</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="timeRange">timeRange: <a href="../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>, <span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="page">page: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="order">order: <a href="SearchSort.html" class="extype" name="models.SearchSort">SearchSort</a></span>)</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.UniversalSearch#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(api:lib.ApiClient,timeRange:lib.timeranges.TimeRange,query:String,page:Integer,filter:String):models.UniversalSearch"></a>
+      <a id="&lt;init&gt;:UniversalSearch"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UniversalSearch</span><span class="params">(<span name="api">api: <a href="../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="timeRange">timeRange: <a href="../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>, <span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="page">page: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="filter">filter: <span class="extype" name="java.lang.String">String</span></span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -293,15 +322,41 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="models.UniversalSearch#getCsvRoute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getCsvRoute(request:play.mvc.Http.Request):play.mvc.Call"></a>
-      <a id="getCsvRoute(Request):Call"></a>
+      <a id="getCsvRoute(request:play.mvc.Http.Request,stream:models.Stream):play.mvc.Call"></a>
+      <a id="getCsvRoute(Request,Stream):Call"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getCsvRoute</span><span class="params">(<span name="request">request: <span class="extype" name="play.mvc.Http.Request">Request</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+        <span class="name">getCsvRoute</span><span class="params">(<span name="request">request: <span class="extype" name="play.mvc.Http.Request">Request</span></span>, <span name="stream">stream: <a href="Stream.html" class="extype" name="models.Stream">Stream</a></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.UniversalSearch#getOrder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getOrder():models.SearchSort"></a>
+      <a id="getOrder():SearchSort"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOrder</span><span class="params">()</span><span class="result">: <a href="SearchSort.html" class="extype" name="models.SearchSort">SearchSort</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.UniversalSearch#getRoute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getRoute(request:play.mvc.Http.Request,page:Int,sortField:String,sortOrder:String):play.mvc.Call"></a>
+      <a id="getRoute(Request,Int,String,String):Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getRoute</span><span class="params">(<span name="request">request: <span class="extype" name="play.mvc.Http.Request">Request</span></span>, <span name="page">page: <span class="extype" name="scala.Int">Int</span></span>, <span name="sortField">sortField: <span class="extype" name="java.lang.String">String</span></span>, <span name="sortOrder">sortOrder: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
       </span>
       </h4>
       
