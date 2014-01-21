@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>MessageResult - models.api.results.MessageResult</title>
-          <meta name="description" content="MessageResult - models.api.results.MessageResult" />
-          <meta name="keywords" content="MessageResult models.api.results.MessageResult" />
+          <title>QuickvaluesWidget - models.dashboards.widgets.QuickvaluesWidget</title>
+          <meta name="description" content="QuickvaluesWidget - models.dashboards.widgets.QuickvaluesWidget" />
+          <meta name="keywords" content="QuickvaluesWidget models.dashboards.widgets.QuickvaluesWidget" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'models.api.results.MessageResult';
+            var hash = 'models.dashboards.widgets.QuickvaluesWidget';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,8 +25,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="models">models</a>.<a href="../package.html" class="extype" name="models.api">api</a>.<a href="package.html" class="extype" name="models.api.results">results</a></p>
-        <h1>MessageResult</h1>
+        <p id="owner"><a href="../../package.html" class="extype" name="models">models</a>.<a href="../package.html" class="extype" name="models.dashboards">dashboards</a>.<a href="package.html" class="extype" name="models.dashboards.widgets">widgets</a></p>
+        <h1>QuickvaluesWidget</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">MessageResult</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">QuickvaluesWidget</span><span class="result"> extends <a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="models.api.results.MessageResult"><span>MessageResult</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="models.dashboards.widgets.QuickvaluesWidget"><span>QuickvaluesWidget</span></li><li class="in" name="models.dashboards.widgets.DashboardWidget"><span>DashboardWidget</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -79,16 +79,29 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="models.api.results.MessageResult#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(message:java.util.Map[String,Object],index:String):models.api.results.MessageResult"></a>
-      <a id="&lt;init&gt;:MessageResult"></a>
+              <ol><li name="models.dashboards.widgets.QuickvaluesWidget#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(dashboard:models.dashboards.Dashboard,id:String,description:String,streamId:String,cacheTime:Int,query:String,timerange:lib.timeranges.TimeRange,field:String,creatorUserId:String):models.dashboards.widgets.QuickvaluesWidget"></a>
+      <a id="&lt;init&gt;:QuickvaluesWidget"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MessageResult</span><span class="params">(<span name="message">message: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>, <span name="index">index: <span class="extype" name="java.lang.String">String</span></span>)</span>
+        <span class="name">QuickvaluesWidget</span><span class="params">(<span name="dashboard">dashboard: <a href="../Dashboard.html" class="extype" name="models.dashboards.Dashboard">Dashboard</a></span>, <span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="description">description: <span class="extype" name="java.lang.String">String</span></span>, <span name="streamId">streamId: <span class="extype" name="java.lang.String">String</span></span>, <span name="cacheTime">cacheTime: <span class="extype" name="scala.Int">Int</span></span>, <span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="timerange">timerange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>, <span name="field">field: <span class="extype" name="java.lang.String">String</span></span>, <span name="creatorUserId">creatorUserId: <span class="extype" name="java.lang.String">String</span></span>)</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.dashboards.widgets.QuickvaluesWidget#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(dashboard:models.dashboards.Dashboard,query:String,timerange:lib.timeranges.TimeRange,field:String,description:String,streamId:String):models.dashboards.widgets.QuickvaluesWidget"></a>
+      <a id="&lt;init&gt;:QuickvaluesWidget"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">QuickvaluesWidget</span><span class="params">(<span name="dashboard">dashboard: <a href="../Dashboard.html" class="extype" name="models.dashboards.Dashboard">Dashboard</a></span>, <span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="timerange">timerange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>, <span name="field">field: <span class="extype" name="java.lang.String">String</span></span>, <span name="description">description: <span class="extype" name="java.lang.String">String</span></span>, <span name="streamId">streamId: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       </h4>
       
@@ -243,6 +256,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getCacheTime" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCacheTime():Int"></a>
+      <a id="getCacheTime():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCacheTime</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -256,46 +282,85 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.api.results.MessageResult#getFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFields():java.util.Map[String,Object]"></a>
-      <a id="getFields():Map[String,AnyRef]"></a>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCol():Int"></a>
+      <a id="getCol():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getFields</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
+        <span class="name">getCol</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getFilteredFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFilteredFields():java.util.Map[String,Object]"></a>
-      <a id="getFilteredFields():Map[String,AnyRef]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.QuickvaluesWidget#getConfig" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getConfig():java.util.Map[String,Object]"></a>
+      <a id="getConfig():Map[String,AnyRef]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getFilteredFields</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
+        <span class="name">getConfig</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getFormattedFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFormattedFields():java.util.Map[String,Object]"></a>
-      <a id="getFormattedFields():Map[String,AnyRef]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.dashboards.widgets.QuickvaluesWidget">QuickvaluesWidget</a> → <a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getCreatorUserId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCreatorUserId():String"></a>
+      <a id="getCreatorUserId():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getFormattedFields</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
+        <span class="name">getCreatorUserId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getDashboard" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDashboard():models.dashboards.Dashboard"></a>
+      <a id="getDashboard():Dashboard"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDashboard</span><span class="params">()</span><span class="result">: <a href="../Dashboard.html" class="extype" name="models.dashboards.Dashboard">Dashboard</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getDescription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDescription():String"></a>
+      <a id="getDescription():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDescription</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.QuickvaluesWidget#getHeight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getHeight():Int"></a>
+      <a id="getHeight():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHeight</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.dashboards.widgets.QuickvaluesWidget">QuickvaluesWidget</a> → <a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getId():String"></a>
       <a id="getId():String"></a>
       <h4 class="signature">
@@ -307,98 +372,59 @@
         <span class="name">getId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getIndex():String"></a>
-      <a id="getIndex():String"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getRow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getRow():Int"></a>
+      <a id="getRow():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getIndex</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getRow</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getSourceInputId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSourceInputId():String"></a>
-      <a id="getSourceInputId():String"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getType():models.dashboards.widgets.DashboardWidget.Type"></a>
+      <a id="getType():Type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSourceInputId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getType</span><span class="params">()</span><span class="result">: <span class="extype" name="models.dashboards.widgets.DashboardWidget.Type">Type</span></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getSourceNodeId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSourceNodeId():String"></a>
-      <a id="getSourceNodeId():String"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#getValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValue(api:lib.ApiClient):models.api.responses.dashboards.DashboardWidgetValueResponse"></a>
+      <a id="getValue(ApiClient):DashboardWidgetValueResponse"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSourceNodeId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getValue</span><span class="params">(<span name="api">api: <a href="../../../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>)</span><span class="result">: <a href="../../api/responses/dashboards/DashboardWidgetValueResponse.html" class="extype" name="models.api.responses.dashboards.DashboardWidgetValueResponse">DashboardWidgetValueResponse</a></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getSourceRadioId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSourceRadioId():String"></a>
-      <a id="getSourceRadioId():String"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.QuickvaluesWidget#getWidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getWidth():Int"></a>
+      <a id="getWidth():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSourceRadioId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getWidth</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      
-    </li><li name="models.api.results.MessageResult#getSourceRadioInputId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSourceRadioInputId():String"></a>
-      <a id="getSourceRadioInputId():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSourceRadioInputId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.api.results.MessageResult#getStreamIds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getStreamIds():java.util.List[String]"></a>
-      <a id="getStreamIds():List[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getStreamIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.lang.String">String</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="models.api.results.MessageResult#getTimestamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getTimestamp():String"></a>
-      <a id="getTimestamp():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTimestamp</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.dashboards.widgets.QuickvaluesWidget">QuickvaluesWidget</a> → <a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -464,6 +490,71 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#prepareNonStreamBoundReplayRoute" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prepareNonStreamBoundReplayRoute(query:String,timerange:lib.timeranges.TimeRange):play.mvc.Call"></a>
+      <a id="prepareNonStreamBoundReplayRoute(String,TimeRange):Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prepareNonStreamBoundReplayRoute</span><span class="params">(<span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="timerange">timerange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="models.dashboards.widgets">models.dashboards.widgets</a>] </dd><dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#prepareStreamBoundReplayRoute" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prepareStreamBoundReplayRoute(streamId:String,query:String,timerange:lib.timeranges.TimeRange):play.mvc.Call"></a>
+      <a id="prepareStreamBoundReplayRoute(String,String,TimeRange):Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prepareStreamBoundReplayRoute</span><span class="params">(<span name="streamId">streamId: <span class="extype" name="java.lang.String">String</span></span>, <span name="query">query: <span class="extype" name="java.lang.String">String</span></span>, <span name="timerange">timerange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>)</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="models.dashboards.widgets">models.dashboards.widgets</a>] </dd><dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.QuickvaluesWidget#replayRoute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="replayRoute():play.mvc.Call"></a>
+      <a id="replayRoute():Call"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replayRoute</span><span class="params">()</span><span class="result">: <span class="extype" name="play.mvc.Call">Call</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="models.dashboards.widgets.QuickvaluesWidget">QuickvaluesWidget</a> → <a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#setCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setCol(col:Int):Unit"></a>
+      <a id="setCol(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCol</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#setRow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setRow(row:Int):Unit"></a>
+      <a id="setRow(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setRow</span><span class="params">(<span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -490,19 +581,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.api.results.MessageResult#viaRadio" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="viaRadio():Boolean"></a>
-      <a id="viaRadio():Boolean"></a>
+    </li><li name="models.dashboards.widgets.DashboardWidget#updateCacheTime" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateCacheTime(api:lib.ApiClient,cacheTime:Int):Unit"></a>
+      <a id="updateCacheTime(ApiClient,Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">viaRadio</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">updateCacheTime</span><span class="params">(<span name="api">api: <a href="../../../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="cacheTime">cacheTime: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
+    </li><li name="models.dashboards.widgets.DashboardWidget#updateDescription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateDescription(api:lib.ApiClient,newDescription:String):Unit"></a>
+      <a id="updateDescription(ApiClient,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateDescription</span><span class="params">(<span name="api">api: <a href="../../../lib/ApiClient.html" class="extype" name="lib.ApiClient">ApiClient</a></span>, <span name="newDescription">newDescription: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -569,7 +673,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="models.dashboards.widgets.DashboardWidget">
+              <h3>Inherited from <a href="DashboardWidget.html" class="extype" name="models.dashboards.widgets.DashboardWidget">DashboardWidget</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
