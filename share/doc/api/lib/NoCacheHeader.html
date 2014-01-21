@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>LdapSettings - models.accounts.LdapSettings</title>
-          <meta name="description" content="LdapSettings - models.accounts.LdapSettings" />
-          <meta name="keywords" content="LdapSettings models.accounts.LdapSettings" />
+          <title>NoCacheHeader - lib.NoCacheHeader</title>
+          <meta name="description" content="NoCacheHeader - lib.NoCacheHeader" />
+          <meta name="keywords" content="NoCacheHeader lib.NoCacheHeader" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../index.html';
-            var hash = 'models.accounts.LdapSettings';
+            var url = '../index.html';
+            var hash = 'lib.NoCacheHeader';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../lib/class_big.png" />
-        <p id="owner"><a href="../package.html" class="extype" name="models">models</a>.<a href="package.html" class="extype" name="models.accounts">accounts</a></p>
-        <h1>LdapSettings</h1>
+        <img src="class_big.png" />
+        <p id="owner"><a href="package.html" class="extype" name="lib">lib</a></p>
+        <h1>NoCacheHeader</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,15 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">LdapSettings</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">NoCacheHeader</span><span class="result"> extends <span class="extype" name="play.api.mvc.Filter">Filter</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds a Cache-Control: no-cache header to all AJAX responses,
+to prevent IE9 and earlier from blindly caching AJAX GET requests.</p><p>Only adds a Cache-Control header if the Action hasn't set one by itself.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="play.api.mvc.Filter">Filter</span>, <span class="extype" name="play.api.mvc.EssentialFilter">EssentialFilter</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +61,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="models.accounts.LdapSettings"><span>LdapSettings</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="lib.NoCacheHeader"><span>NoCacheHeader</span></li><li class="in" name="play.api.mvc.Filter"><span>Filter</span></li><li class="in" name="play.api.mvc.EssentialFilter"><span>EssentialFilter</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -77,7 +79,23 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="lib.NoCacheHeader#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():lib.NoCacheHeader"></a>
+      <a id="&lt;init&gt;:NoCacheHeader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NoCacheHeader</span><span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -150,6 +168,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="lib.NoCacheHeader#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(nextFilter:play.api.mvc.RequestHeader=&gt;scala.concurrent.Future[play.api.mvc.SimpleResult])(requestHeader:play.api.mvc.RequestHeader):scala.concurrent.Future[play.api.mvc.SimpleResult]"></a>
+      <a id="apply((RequestHeader)⇒Future[SimpleResult])(RequestHeader):Future[SimpleResult]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="nextFilter">nextFilter: (<span class="extype" name="play.api.mvc.RequestHeader">RequestHeader</span>) ⇒ <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="play.api.mvc.SimpleResult">SimpleResult</span>]</span>)</span><span class="params">(<span name="requestHeader">requestHeader: <span class="extype" name="play.api.mvc.RequestHeader">RequestHeader</span></span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="play.api.mvc.SimpleResult">SimpleResult</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="lib.NoCacheHeader">NoCacheHeader</a> → Filter</dd></dl></div>
+    </li><li name="play.api.mvc.Filter#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(next:play.api.mvc.EssentialAction):play.api.mvc.EssentialAction"></a>
+      <a id="apply(EssentialAction):EssentialAction"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="next">next: <span class="extype" name="play.api.mvc.EssentialAction">EssentialAction</span></span>)</span><span class="result">: <span class="extype" name="play.api.mvc.EssentialAction">EssentialAction</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Filter → EssentialFilter</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -175,26 +219,13 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="models.accounts.LdapSettings#delete" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="delete():Boolean"></a>
-      <a id="delete():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">delete</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -233,7 +264,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -253,97 +284,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.accounts.LdapSettings#getDefaultGroup" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getDefaultGroup():String"></a>
-      <a id="getDefaultGroup():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDefaultGroup</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#getDisplayNameAttribute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getDisplayNameAttribute():String"></a>
-      <a id="getDisplayNameAttribute():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDisplayNameAttribute</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#getLdapUri" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLdapUri():java.net.URI"></a>
-      <a id="getLdapUri():URI"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLdapUri</span><span class="params">()</span><span class="result">: <span class="extype" name="java.net.URI">URI</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#getSearchBase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSearchBase():String"></a>
-      <a id="getSearchBase():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSearchBase</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#getSearchPattern" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSearchPattern():String"></a>
-      <a id="getSearchPattern():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSearchPattern</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#getSystemPassword" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSystemPassword():String"></a>
-      <a id="getSystemPassword():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSystemPassword</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#getSystemUsername" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSystemUsername():String"></a>
-      <a id="getSystemUsername():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSystemUsername</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -357,32 +297,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.accounts.LdapSettings#isActiveDirectory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isActiveDirectory():Boolean"></a>
-      <a id="isActiveDirectory():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isActiveDirectory</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#isEnabled" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isEnabled():Boolean"></a>
-      <a id="isEnabled():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -396,32 +310,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="models.accounts.LdapSettings#isTrustAllCertificates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isTrustAllCertificates():Boolean"></a>
-      <a id="isTrustAllCertificates():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isTrustAllCertificates</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#isUseStartTls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isUseStartTls():Boolean"></a>
-      <a id="isUseStartTls():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isUseStartTls</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -461,149 +349,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="models.accounts.LdapSettings#save" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="save():Boolean"></a>
-      <a id="save():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">save</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setActiveDirectory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setActiveDirectory(activeDirectory:Boolean):Unit"></a>
-      <a id="setActiveDirectory(Boolean):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setActiveDirectory</span><span class="params">(<span name="activeDirectory">activeDirectory: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setDefaultGroup" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setDefaultGroup(defaultGroup:String):Unit"></a>
-      <a id="setDefaultGroup(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setDefaultGroup</span><span class="params">(<span name="defaultGroup">defaultGroup: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setDisplayUsername" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setDisplayUsername(systemUsername:String):Unit"></a>
-      <a id="setDisplayUsername(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setDisplayUsername</span><span class="params">(<span name="systemUsername">systemUsername: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setEnabled" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setEnabled(enabled:Boolean):Unit"></a>
-      <a id="setEnabled(Boolean):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setEnabled</span><span class="params">(<span name="enabled">enabled: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setLdapUri" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLdapUri(ldapUri:java.net.URI):Unit"></a>
-      <a id="setLdapUri(URI):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setLdapUri</span><span class="params">(<span name="ldapUri">ldapUri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setSearchBase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setSearchBase(searchBase:String):Unit"></a>
-      <a id="setSearchBase(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setSearchBase</span><span class="params">(<span name="searchBase">searchBase: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setSearchPattern" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setSearchPattern(searchPattern:String):Unit"></a>
-      <a id="setSearchPattern(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setSearchPattern</span><span class="params">(<span name="searchPattern">searchPattern: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setSystemPassword" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setSystemPassword(systemPassword:String):Unit"></a>
-      <a id="setSystemPassword(String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setSystemPassword</span><span class="params">(<span name="systemPassword">systemPassword: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setTrustAllCertificates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setTrustAllCertificates(trustAllCertificates:Boolean):Unit"></a>
-      <a id="setTrustAllCertificates(Boolean):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setTrustAllCertificates</span><span class="params">(<span name="trustAllCertificates">trustAllCertificates: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.accounts.LdapSettings#setUseStartTls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setUseStartTls(useStartTls:Boolean):Unit"></a>
-      <a id="setUseStartTls(Boolean):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setUseStartTls</span><span class="params">(<span name="useStartTls">useStartTls: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -617,19 +362,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="models.accounts.LdapSettings#toRequest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toRequest():models.api.requests.accounts.LdapSettingsRequest"></a>
-      <a id="toRequest():LdapSettingsRequest"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toRequest</span><span class="params">()</span><span class="result">: <a href="../api/requests/accounts/LdapSettingsRequest.html" class="extype" name="models.api.requests.accounts.LdapSettingsRequest">LdapSettingsRequest</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -709,7 +441,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="play.api.mvc.Filter">
+              <h3>Inherited from <span class="extype" name="play.api.mvc.Filter">Filter</span></h3>
+            </div><div class="parent" name="play.api.mvc.EssentialFilter">
+              <h3>Inherited from <span class="extype" name="play.api.mvc.EssentialFilter">EssentialFilter</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
@@ -729,6 +465,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="template.js"></script>
     </body>
       </html>
