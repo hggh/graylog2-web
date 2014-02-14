@@ -9,7 +9,7 @@ Homepage: http://www.graylog2.org
 Package: graylog2-web
 Architecture: all
 Depends: ${misc:Depends},
- openjdk-7-jre-headless | java7-runtime-headless | java7-runtime,
+ java7-runtime-headless,
  adduser
 Suggests: graylog2-server
 Description: Graylog2 Loggingframework - Web Interface
