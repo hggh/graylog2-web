@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.api.results.SearchResult#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(originalQuery:String,builtQuery:String,timeRange:lib.timeranges.TimeRange,totalResultCount:Int,tookMs:Int,results:java.util.List[models.api.responses.MessageSummaryResponse],fields:java.util.List[String],usedIndices:java.util.List[String],error:models.api.responses.SearchResultResponse.QueryError):models.api.results.SearchResult"></a>
+      <a id="&lt;init&gt;(originalQuery:String,builtQuery:String,timeRange:lib.timeranges.TimeRange,totalResultCount:Int,tookMs:Int,summaryResponses:java.util.List[models.api.responses.MessageSummaryResponse],fields:java.util.List[String],usedIndices:java.util.List[String],error:models.api.responses.SearchResultResponse.QueryError,fieldMapper:models.FieldMapper):models.api.results.SearchResult"></a>
       <a id="&lt;init&gt;:SearchResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SearchResult</span><span class="params">(<span name="originalQuery">originalQuery: <span class="extype" name="java.lang.String">String</span></span>, <span name="builtQuery">builtQuery: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeRange">timeRange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>, <span name="totalResultCount">totalResultCount: <span class="extype" name="scala.Int">Int</span></span>, <span name="tookMs">tookMs: <span class="extype" name="scala.Int">Int</span></span>, <span name="results">results: <span class="extype" name="java.util.List">List</span>[<a href="../responses/MessageSummaryResponse.html" class="extype" name="models.api.responses.MessageSummaryResponse">MessageSummaryResponse</a>]</span>, <span name="fields">fields: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="usedIndices">usedIndices: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="error">error: <span class="extype" name="models.api.responses.SearchResultResponse.QueryError">QueryError</span></span>)</span>
+        <span class="name">SearchResult</span><span class="params">(<span name="originalQuery">originalQuery: <span class="extype" name="java.lang.String">String</span></span>, <span name="builtQuery">builtQuery: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeRange">timeRange: <a href="../../../lib/timeranges/TimeRange.html" class="extype" name="lib.timeranges.TimeRange">TimeRange</a></span>, <span name="totalResultCount">totalResultCount: <span class="extype" name="scala.Int">Int</span></span>, <span name="tookMs">tookMs: <span class="extype" name="scala.Int">Int</span></span>, <span name="summaryResponses">summaryResponses: <span class="extype" name="java.util.List">List</span>[<a href="../responses/MessageSummaryResponse.html" class="extype" name="models.api.responses.MessageSummaryResponse">MessageSummaryResponse</a>]</span>, <span name="fields">fields: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="usedIndices">usedIndices: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="error">error: <span class="extype" name="models.api.responses.SearchResultResponse.QueryError">QueryError</span></span>, <span name="fieldMapper">fieldMapper: <a href="../../FieldMapper.html" class="extype" name="models.FieldMapper">FieldMapper</a></span>)</span>
       </span>
       </h4>
       
@@ -296,15 +296,15 @@
       </h4>
       
     </li><li name="models.api.results.SearchResult#getMessages" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getMessages():java.util.List[models.api.responses.MessageSummaryResponse]"></a>
-      <a id="getMessages():List[MessageSummaryResponse]"></a>
+      <a id="getMessages():java.util.List[models.api.results.MessageResult]"></a>
+      <a id="getMessages():List[MessageResult]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMessages</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<a href="../responses/MessageSummaryResponse.html" class="extype" name="models.api.responses.MessageSummaryResponse">MessageSummaryResponse</a>]</span>
+        <span class="name">getMessages</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<a href="MessageResult.html" class="extype" name="models.api.results.MessageResult">MessageResult</a>]</span>
       </span>
       </h4>
       
