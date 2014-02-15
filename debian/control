@@ -5,6 +5,8 @@ Maintainer: Jonas Genannt <jonas.genannt@capi2name.de>
 Build-Depends: debhelper (>= 8)
 Standards-Version: 3.9.5
 Homepage: http://www.graylog2.org
+Vcs-Git: https://github.com/hggh/graylog2-web.git
+Vcs-Browser: https://github.com/hggh/graylog2-web/
 
 Package: graylog2-web
 Architecture: all
