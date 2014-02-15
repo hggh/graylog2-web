@@ -4,13 +4,33 @@ Source: https://github.com/Graylog2/graylog2-web-interface/
 Upstream-Name: Graylog2-web-interface
 
 Files: *
-Copyright: FIXME
-License: Custom
- Please see https://github.com/Graylog2/graylog2-web-interface/ for copyright
+Copyright: 2013-2014 TORCH GmbH
+License: GPL-3
+Comment: Graylog2 bundles other Java libraries. For the copyright of
+         the embeeded libraries please have a look at the source of
+         the libraries.
 
 Files: debian/*
-           2013 Jonas Genannt <jonas.genannt@capi2name.de>
+Copyright: 2013-2014 Jonas Genannt <jonas.genannt@capi2name.de>
 License: Apache
+
+License: GPL-3
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with Graylog2. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
 
 License: Apache
  Licensed under the Apache License, Version 2.0 (the "License");
