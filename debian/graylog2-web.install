@@ -1,4 +1,4 @@
-lib opt/graylog2/web
+lib usr/share/graylog2-web
 conf/application.conf etc/graylog2/web
 conf/graylog2-web-interface.conf etc/graylog2/web
 conf/play.plugins etc/graylog2/web

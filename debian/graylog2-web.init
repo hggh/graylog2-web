@@ -15,7 +15,7 @@
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DESC="Graylog2 Web Interface"
 NAME=graylog2-web
-GRAYLOG2_WEB_HOME=/opt/graylog2/web
+GRAYLOG2_WEB_HOME=/usr/share/graylog2-web
 JAR_DIRECTORY="${GRAYLOG2_WEB_HOME}/lib"
 DAEMON=/usr/bin/java
 PIDFILE=/var/run/graylog2-web/$NAME.pid
