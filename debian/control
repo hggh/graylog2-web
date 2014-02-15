@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Jonas Genannt <jonas.genannt@capi2name.de>
 Build-Depends: debhelper (>= 8)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://www.graylog2.org
 
 Package: graylog2-web
