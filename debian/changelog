@@ -1,3 +1,9 @@
+graylog2-web (0.20.0-1) unstable; urgency=low
+
+  * Imported Upstream version 0.20.0
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Wed, 19 Feb 2014 19:18:07 +0100
+
 graylog2-web (0.20.0~rc.3-2) unstable; urgency=low
 
   * d/control: bumped standards version to 3.9.5 (no changes needed)
