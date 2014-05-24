@@ -254,15 +254,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="controllers.SearchController#exportAsCsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="exportAsCsv(q:String,filter:String,rangeType:String,relative:Int,from:String,to:String,keyword:String):play.mvc.Result"></a>
-      <a id="exportAsCsv(String,String,String,Int,String,String,String):Result"></a>
+      <a id="exportAsCsv(q:String,filter:String,rangeType:String,relative:Int,from:String,to:String,keyword:String,fields:String):play.mvc.Result"></a>
+      <a id="exportAsCsv(String,String,String,Int,String,String,String,String):Result"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">exportAsCsv</span><span class="params">(<span name="q">q: <span class="extype" name="java.lang.String">String</span></span>, <span name="filter">filter: <span class="extype" name="java.lang.String">String</span></span>, <span name="rangeType">rangeType: <span class="extype" name="java.lang.String">String</span></span>, <span name="relative">relative: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="java.lang.String">String</span></span>, <span name="to">to: <span class="extype" name="java.lang.String">String</span></span>, <span name="keyword">keyword: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Result">Result</span></span>
+        <span class="name">exportAsCsv</span><span class="params">(<span name="q">q: <span class="extype" name="java.lang.String">String</span></span>, <span name="filter">filter: <span class="extype" name="java.lang.String">String</span></span>, <span name="rangeType">rangeType: <span class="extype" name="java.lang.String">String</span></span>, <span name="relative">relative: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="java.lang.String">String</span></span>, <span name="to">to: <span class="extype" name="java.lang.String">String</span></span>, <span name="keyword">keyword: <span class="extype" name="java.lang.String">String</span></span>, <span name="fields">fields: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Result">Result</span></span>
       </span>
       </h4>
       
@@ -337,6 +337,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="controllers">controllers</a>] </dd></dl></div>
+    </li><li name="controllers.SearchController#getSelectedFields" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSelectedFields(fields:String):java.util.Set[String]"></a>
+      <a id="getSelectedFields(String):Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSelectedFields</span><span class="params">(<span name="fields">fields: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="package.html" class="extype" name="controllers">controllers</a>] </dd></dl></div>
     </li><li name="controllers.SearchController#globalSearch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="globalSearch():play.mvc.Result"></a>
       <a id="globalSearch():Result"></a>
@@ -364,15 +377,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="controllers.SearchController#index" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="index(q:String,rangeType:String,relative:Int,from:String,to:String,keyword:String,interval:String,page:Int,savedSearchId:String,sortField:String,sortOrder:String):play.mvc.Result"></a>
-      <a id="index(String,String,Int,String,String,String,String,Int,String,String,String):Result"></a>
+      <a id="index(q:String,rangeType:String,relative:Int,from:String,to:String,keyword:String,interval:String,page:Int,savedSearchId:String,sortField:String,sortOrder:String,fields:String):play.mvc.Result"></a>
+      <a id="index(String,String,Int,String,String,String,String,Int,String,String,String,String):Result"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">index</span><span class="params">(<span name="q">q: <span class="extype" name="java.lang.String">String</span></span>, <span name="rangeType">rangeType: <span class="extype" name="java.lang.String">String</span></span>, <span name="relative">relative: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="java.lang.String">String</span></span>, <span name="to">to: <span class="extype" name="java.lang.String">String</span></span>, <span name="keyword">keyword: <span class="extype" name="java.lang.String">String</span></span>, <span name="interval">interval: <span class="extype" name="java.lang.String">String</span></span>, <span name="page">page: <span class="extype" name="scala.Int">Int</span></span>, <span name="savedSearchId">savedSearchId: <span class="extype" name="java.lang.String">String</span></span>, <span name="sortField">sortField: <span class="extype" name="java.lang.String">String</span></span>, <span name="sortOrder">sortOrder: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Result">Result</span></span>
+        <span class="name">index</span><span class="params">(<span name="q">q: <span class="extype" name="java.lang.String">String</span></span>, <span name="rangeType">rangeType: <span class="extype" name="java.lang.String">String</span></span>, <span name="relative">relative: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="java.lang.String">String</span></span>, <span name="to">to: <span class="extype" name="java.lang.String">String</span></span>, <span name="keyword">keyword: <span class="extype" name="java.lang.String">String</span></span>, <span name="interval">interval: <span class="extype" name="java.lang.String">String</span></span>, <span name="page">page: <span class="extype" name="scala.Int">Int</span></span>, <span name="savedSearchId">savedSearchId: <span class="extype" name="java.lang.String">String</span></span>, <span name="sortField">sortField: <span class="extype" name="java.lang.String">String</span></span>, <span name="sortOrder">sortOrder: <span class="extype" name="java.lang.String">String</span></span>, <span name="fields">fields: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="play.mvc.Result">Result</span></span>
       </span>
       </h4>
       
