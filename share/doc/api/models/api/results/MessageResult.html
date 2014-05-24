@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.api.results.MessageResult#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(message:java.util.Map[String,Object],index:String,fieldMapper:models.FieldMapper):models.api.results.MessageResult"></a>
+      <a id="&lt;init&gt;(message:java.util.Map[String,Object],index:String,highlightRanges:java.util.Map[String,java.util.List[models.api.responses.HighlightRange]],fieldMapper:models.FieldMapper):models.api.results.MessageResult"></a>
       <a id="&lt;init&gt;:MessageResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MessageResult</span><span class="params">(<span name="message">message: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>, <span name="index">index: <span class="extype" name="java.lang.String">String</span></span>, <span name="fieldMapper">fieldMapper: <a href="../../FieldMapper.html" class="extype" name="models.FieldMapper">FieldMapper</a></span>)</span>
+        <span class="name">MessageResult</span><span class="params">(<span name="message">message: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>, <span name="index">index: <span class="extype" name="java.lang.String">String</span></span>, <span name="highlightRanges">highlightRanges: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="java.util.List">List</span>[<a href="../responses/HighlightRange.html" class="extype" name="models.api.responses.HighlightRange">HighlightRange</a>]]</span>, <span name="fieldMapper">fieldMapper: <a href="../../FieldMapper.html" class="extype" name="models.FieldMapper">FieldMapper</a></span>)</span>
       </span>
       </h4>
       
@@ -292,6 +292,32 @@
       </span>
       <span class="symbol">
         <span class="name">getFormattedFields</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.api.results.MessageResult#getHighlightRanges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getHighlightRanges():java.util.Map[String,java.util.List[models.api.responses.HighlightRange]]"></a>
+      <a id="getHighlightRanges():Map[String,List[HighlightRange]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHighlightRanges</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="java.util.List">List</span>[<a href="../responses/HighlightRange.html" class="extype" name="models.api.responses.HighlightRange">HighlightRange</a>]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.api.results.MessageResult#getHighlightRangesAsJson" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getHighlightRangesAsJson():String"></a>
+      <a id="getHighlightRangesAsJson():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHighlightRangesAsJson</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
       
