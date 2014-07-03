@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>HighlightRange - models.api.responses.HighlightRange</title>
-          <meta name="description" content="HighlightRange - models.api.responses.HighlightRange" />
-          <meta name="keywords" content="HighlightRange models.api.responses.HighlightRange" />
+          <title>HighlightedField - models.api.results.HighlightedField</title>
+          <meta name="description" content="HighlightedField - models.api.results.HighlightedField" />
+          <meta name="keywords" content="HighlightedField models.api.results.HighlightedField" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'models.api.responses.HighlightRange';
+            var hash = 'models.api.results.HighlightedField';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -25,8 +25,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="models">models</a>.<a href="../package.html" class="extype" name="models.api">api</a>.<a href="package.html" class="extype" name="models.api.responses">responses</a></p>
-        <h1>HighlightRange</h1>
+        <p id="owner"><a href="../../package.html" class="extype" name="models">models</a>.<a href="../package.html" class="extype" name="models.api">api</a>.<a href="package.html" class="extype" name="models.api.results">results</a></p>
+        <h1>HighlightedField</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">HighlightRange</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">HighlightedField</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="models.api.responses.HighlightRange"><span>HighlightRange</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="models.api.results.HighlightedField"><span>HighlightedField</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -79,16 +79,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="models.api.responses.HighlightRange#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():models.api.responses.HighlightRange"></a>
-      <a id="&lt;init&gt;:HighlightRange"></a>
+              <ol><li name="models.api.results.HighlightedField#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(messageResult:models.api.results.MessageResult,field:String):models.api.results.HighlightedField"></a>
+      <a id="&lt;init&gt;:HighlightedField"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">HighlightRange</span><span class="params">()</span>
+        <span class="name">HighlightedField</span><span class="params">(<span name="messageResult">messageResult: <a href="MessageResult.html" class="extype" name="models.api.results.MessageResult">MessageResult</a></span>, <span name="field">field: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       </h4>
       
@@ -243,6 +243,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="models.api.results.HighlightedField#getChunks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getChunks():java.util.List[models.api.results.HighlightedField.FieldChunk]"></a>
+      <a id="getChunks():List[FieldChunk]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getChunks</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="models.api.results.HighlightedField.FieldChunk">FieldChunk</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -256,32 +269,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="models.api.responses.HighlightRange#getLength" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getLength():Int"></a>
-      <a id="getLength():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLength</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="models.api.responses.HighlightRange#getStart" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getStart():Int"></a>
-      <a id="getStart():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
