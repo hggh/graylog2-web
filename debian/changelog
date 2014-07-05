@@ -1,3 +1,9 @@
+graylog2-web (0.20.5-1) unstable; urgency=low
+
+  * Imported Upstream version 0.20.5
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 05 Jul 2014 16:41:12 +0200
+
 graylog2-web (0.20.4-1) unstable; urgency=low
 
   * Imported Upstream version 0.20.4
