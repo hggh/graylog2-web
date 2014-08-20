@@ -15,6 +15,9 @@
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DESC="Graylog2 Web Interface"
 NAME=graylog2-web
+
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
 GRAYLOG2_WEB_HOME=/usr/share/graylog2-web
 JAR_DIRECTORY="${GRAYLOG2_WEB_HOME}/lib"
 DAEMON=/usr/bin/java
@@ -23,15 +26,14 @@ SCRIPTNAME=/etc/init.d/$NAME
 JAVA_MIN_MEM=128m
 JAVA_MAX_MEM=1024m
 JAVA_MAX_PERM_SIZE=256m
-HTTP_ADDRESS="0.0.0.0"
-HTTP_PORT="9000"
-RUN=no
+#HTTP_ADDRESS="0.0.0.0"
+#HTTP_PORT="9000"
+#RUN=no
 
 # Exit if the package is not installed
 [ -d "$JAR_DIRECTORY" ] || exit 0
 [ -x "$DAEMON" ] || exit 0
 
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
 . /lib/init/vars.sh
 
